@@ -16,7 +16,7 @@ const Search: FC<SearchProps> = ({ hasError, onSubmit }) => {
 
     const text = searchRef.current ? searchRef.current.value : "";
 
-    if (text) {
+    if (text.trim()) {
       onSubmit(text)
       if (searchRef.current)
         searchRef.current.value = '';
